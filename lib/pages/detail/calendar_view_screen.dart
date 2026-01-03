@@ -263,7 +263,7 @@ class _CalendarViewScreenState extends State<CalendarViewScreen> {
               CalendarDatePicker(
                 initialDate: _selectedDate,
                 firstDate: firstSelectable!,
-                lastDate: lastSelectable!,
+                lastDate: lastSelectable!.add(const Duration(days: 2)), //ensures can reserve 2 days ahead
                 onDateChanged: _onDateChanged,
               ),
             ],
